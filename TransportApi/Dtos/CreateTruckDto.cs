@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TransportApi.Dtos
 {
-    public record CreateCarDto
+    public record CreateTruckDto
     {
         [Required]
         public string color { get; init; }
@@ -15,10 +15,10 @@ namespace TransportApi.Dtos
         [Required]
         public string gearType { get; init; }
         [Required]
-        [Range(100, 300)]
-        public decimal power { get; init; }
+        public int wheel { get; init; }
         [Required]
-        [Range(2,5)]
-        public int capcaity { get; init; }
+        public string truckBed { get; init; }
+        [Required]
+        public int capacity { get; init; }
     }
 }

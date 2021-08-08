@@ -6,6 +6,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using TransportApi.CarRepository;
+using TransportApi.FlightsRepository;
+using TransportApi.TruckRepository;
 
 namespace TransportApi
 {
@@ -22,6 +24,8 @@ namespace TransportApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<ICarService, InMemCarService>();
+            services.AddSingleton<ITruckService, InMemTrucksService>();
+            services.AddSingleton<IFlightService, InMemFlightsService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

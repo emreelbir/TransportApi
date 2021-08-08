@@ -10,7 +10,7 @@ using TransportApi.Entities;
 namespace TransportApi.Controllers
 {
     [ApiController]
-    [Route("Cars")]
+    [Route("api/cars")]
     public class CarContoller : ControllerBase
     {
         private readonly ICarService repository;
@@ -39,8 +39,9 @@ namespace TransportApi.Controllers
 
             return car;
         }
+
         [HttpPost]
-        public ActionResult<CarDto> CreateItem(CreateCarDto carDto)
+        public ActionResult<CarDto> CreateCar(CreateCarDto carDto)
         {
             Car car = new()
             {

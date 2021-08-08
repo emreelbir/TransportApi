@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace TransportApi.Dtos
 {
-    public record CreateCarDto
+    public record CreateFlightDto
     {
         [Required]
         public string color { get; init; }
         [Required]
         public string brand { get; init; }
         [Required]
-        public string gearType { get; init; }
+        public int power { get; init; }
         [Required]
-        [Range(100, 300)]
-        public decimal power { get; init; }
+        public string motorType { get; init; }
         [Required]
-        [Range(2,5)]
-        public int capcaity { get; init; }
+        public string aspectRatio { get; init; }
+        [Required]
+        public int capacity { get; init; }
     }
 }
